@@ -1,0 +1,20 @@
+{
+  "category": "eshop",
+  "cta": {"primary": "Do obchodu", "secondary": "Prohlédnout kolekce"},
+  "required_sections": [
+    {"id": "hero", "component": "hero-product-large", "note": "Produktová fotka + krátký claim + CTA do obchodu."},
+    {"id": "top_products", "component": "products-grid-featured", "note": "Top 4-8 produktů v gridu s cenou a CTA Koupit."},
+    {"id": "collections", "component": "collections-row", "note": "Kolekce / kategorie - 3-4 tiles s obrázkem."},
+    {"id": "usp", "component": "usp-icons-row", "note": "Proč u nás nakoupit - ikony: doprava zdarma, záruka, recenze, rychlé doručení."},
+    {"id": "reviews", "component": "reviews-star-rating", "note": "Recenze s hvězdičkami, zmínka o hodnocení na Heureka/Google."},
+    {"id": "instagram", "component": "instagram-feed-grid", "note": "IG feed produktů a zákazníků."},
+    {"id": "newsletter", "component": "newsletter-discount", "note": "Newsletter signup s uvítací slevou."},
+    {"id": "contact", "component": "contact-minimal-footer", "note": "Kontakt + obchodní podmínky + GDPR odkazy."}
+  ],
+  "optional_sections": [
+    {"id": "brand_story", "component": "brand-story-short", "note": "Krátký příběh - pokud to je pro značku důležité."}
+  ],
+  "forbidden_sections": ["class-schedule", "process-timeline-4step", "menu-full-list", "case-studies-numbers"],
+  "tone": "konverzí orientované, stručné, produkt v centru; benefit-driven",
+  "primary_photo_type": "product-hero-shot"
+}

@@ -1,0 +1,20 @@
+{
+  "category": "sluzby_b2b",
+  "cta": {"primary": "Konzultace zdarma", "secondary": "Stáhnout info"},
+  "required_sections": [
+    {"id": "hero", "component": "hero-centered-value-prop", "note": "Centered minimal; hlavní value prop v 1 větě; pod ní krátká podstata v 2 větách."},
+    {"id": "services", "component": "services-cards-detailed", "note": "Karty služeb se specifikací co konkrétně řeším."},
+    {"id": "for_whom", "component": "audience-segmentation", "note": "Pro koho - 3 segmenty (OSVČ / s.r.o. / startupy) s ikonou a popisem."},
+    {"id": "pricing_model", "component": "pricing-model-explanation", "note": "Hodinovka / paušál / projekty - text popis s cenami."},
+    {"id": "case_studies", "component": "case-studies-numbers", "note": "Reference s konkrétními čísly (úspora, čas, ROI). Pokud nedostupné: anonymní shrnutí."},
+    {"id": "about", "component": "about-me-credentials", "note": "O mně/tým - kvalifikace, licence, roky praxe (z team[])."},
+    {"id": "contact", "component": "consultation-cta-contact", "note": "Konzultace zdarma CTA + kontakt + formulář."}
+  ],
+  "optional_sections": [
+    {"id": "blog", "component": "blog-teasers-3col", "note": "Blog/ke stažení - pokud firma publikuje."},
+    {"id": "faq", "component": "faq-accordion-professional", "note": "FAQ - licence, GDPR, smlouvy."}
+  ],
+  "forbidden_sections": ["before-after-slider", "menu", "class-schedule", "product-mosaic", "instagram-feed-grid"],
+  "tone": "klidné, kompetentní, konkrétní; žádné superlativy; čísla a fakta",
+  "primary_photo_type": "professional-portrait-or-office"
+}

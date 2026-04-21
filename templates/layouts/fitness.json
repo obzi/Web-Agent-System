@@ -1,0 +1,20 @@
+{
+  "category": "fitness",
+  "cta": {"primary": "Zkusit lekci zdarma", "secondary": "Zobrazit rozvrh"},
+  "required_sections": [
+    {"id": "hero", "component": "hero-video-bg", "note": "Video BG lidé v akci; silný motivační claim; CTA Zkusit lekci zdarma."},
+    {"id": "schedule", "component": "weekly-class-schedule", "note": "Týdenní kalendář lekcí - hlavní obsah (ze schedule[])."},
+    {"id": "trainers", "component": "trainer-cards-dark", "note": "Karty trenérů se specializací, fotkami v akci (z team[])."},
+    {"id": "membership", "component": "pricing-tabs-3col", "note": "Měsíc / 10 vstupů / rok (z pricing_tiers[])."},
+    {"id": "results", "component": "transformation-before-after", "note": "Výsledky klientů - before/after z gallery kde type=before/after."},
+    {"id": "reviews", "component": "reviews-bold", "note": "Recenze ve stylu gymu - velké tučné písmo, fotka autora."},
+    {"id": "first_free", "component": "first-lesson-cta-banner", "note": "Fullwidth banner První lekce zdarma."},
+    {"id": "contact", "component": "contact-hours-map-dark", "note": "Kontakt + mapa v tmavém režimu."}
+  ],
+  "optional_sections": [
+    {"id": "challenges", "component": "challenges-banner", "note": "Aktuální výzvy / challenges - pokud USP."}
+  ],
+  "forbidden_sections": ["menu", "process-timeline", "before-after-hair", "faq-accordion-soft", "team-cards-feminine"],
+  "tone": "energické, motivační, silné; imperativy (pojď, začni, zvládneš)",
+  "primary_photo_type": "action-shot-training"
+}

@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "content.schema.json",
+  "title": "RapidLocalSites content",
+  "type": "object",
+  "required": ["slug", "name", "category", "contact"],
+  "properties": {
+    "slug": {"type": "string"},
+    "name": {"type": "string"},
+    "category": {
+      "type": "string",
+      "enum": ["salon", "restaurace", "autoservis", "fitness", "remeslo", "sluzby_b2b", "zdravi", "eshop"]
+    },
+    "tagline": {"type": "string"},
+    "usp": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "1-3 sentences unique to this business (from scrape/classify)."
+    },
+    "about": {"type": "string"},
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "price": {"type": "string"},
+          "duration": {"type": "string"}
+        }
+      }
+    },
+    "menu": {
+      "type": "array",
+      "description": "Restaurace only.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "section": {"type": "string"},
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {"type": "string"},
+                "description": {"type": "string"},
+                "price": {"type": "string"},
+                "allergens": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "schedule": {
+      "type": "array",
+      "description": "Fitness only: weekly class schedule.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "day": {"type": "string"},
+          "time": {"type": "string"},
+          "class_name": {"type": "string"},
+          "trainer": {"type": "string"}
+        }
+      }
+    },
+    "team": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "role": {"type": "string"},
+          "bio": {"type": "string"},
+          "photo": {"type": "string"},
+          "credentials": {"type": "string"}
+        }
+      }
+    },
+    "pricing_tiers": {
+      "type": "array",
+      "description": "Fitness memberships or B2B packages.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "price": {"type": "string"},
+          "period": {"type": "string"},
+          "features": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "process_steps": {
+      "type": "array",
+      "description": "Autoservis / zdravi / remeslo: 1→2→3→4 timeline.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step": {"type": "integer"},
+          "title": {"type": "string"},
+          "description": {"type": "string"}
+        }
+      }
+    },
+    "faq": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {"type": "string"},
+          "answer": {"type": "string"}
+        }
+      }
+    },
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "author": {"type": "string"},
+          "rating": {"type": "integer"},
+          "text": {"type": "string"},
+          "source": {"type": "string"}
+        }
+      }
+    },
+    "gallery": {
+      "type": "array",
+      "description": "Real photos from IG/GMB scrape. Never stock.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {"type": "string"},
+          "alt": {"type": "string"},
+          "type": {"type": "string", "enum": ["before", "after", "gallery", "interior", "product", "team"]}
+        }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "required": ["phone"],
+      "properties": {
+        "phone": {"type": "string"},
+        "email": {"type": "string"},
+        "address": {"type": "string"},
+        "city": {"type": "string"},
+        "map_url": {"type": "string"},
+        "instagram": {"type": "string"},
+        "facebook": {"type": "string"},
+        "website": {"type": "string"}
+      }
+    },
+    "hours": {
+      "type": "object",
+      "additionalProperties": {"type": "string"},
+      "description": "Keyed by day name in Czech (pondělí, úterý, ...)."
+    },
+    "cta": {
+      "type": "object",
+      "properties": {
+        "primary": {"type": "string"},
+        "secondary": {"type": "string"}
+      }
+    }
+  }
+}

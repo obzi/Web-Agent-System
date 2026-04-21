@@ -1,0 +1,20 @@
+{
+  "category": "autoservis",
+  "cta": {"primary": "Zavolat", "secondary": "Nezávazná poptávka"},
+  "required_sections": [
+    {"id": "hero", "component": "hero-angular-phone", "note": "Diagonální layout, akční fotka; telefon prominentně v headeru vedle názvu (jediná kategorie s tel v hero)."},
+    {"id": "services", "component": "services-icon-grid", "note": "Co opravujeme/nabízíme - ikony + krátký popis + orientační ceny."},
+    {"id": "process", "component": "process-timeline-4step", "note": "1→2→3→4 timeline: objednání → diagnostika → oprava → předání. Z process_steps[]."},
+    {"id": "equipment", "component": "equipment-badges", "note": "Vybavení a technologie - budování důvěry."},
+    {"id": "references", "component": "client-logos-strip", "note": "Loga firem / flotily pro které pracují."},
+    {"id": "reviews", "component": "reviews-card-grid", "note": "Recenze s hvězdičkami."},
+    {"id": "faq", "component": "faq-accordion", "note": "Kolik trvá, záruky, půjčovna auta (z faq[])."},
+    {"id": "contact", "component": "contact-form-with-photo-upload", "note": "Poptávkový formulář: popis závady + foto upload + telefon + mapa."}
+  ],
+  "optional_sections": [
+    {"id": "emergency", "component": "emergency-banner", "note": "24/7 odtah - pokud v USP."}
+  ],
+  "forbidden_sections": ["before-after-slider", "menu", "class-schedule", "instagram-feed", "team-cards-feminine"],
+  "tone": "věcné, přímé, profesionální; zdůraznit spolehlivost a rychlost",
+  "primary_photo_type": "work-in-progress-or-shop"
+}

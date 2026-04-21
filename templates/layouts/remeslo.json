@@ -1,0 +1,20 @@
+{
+  "category": "remeslo",
+  "cta": {"primary": "Objednat", "secondary": "Napsat dotaz"},
+  "required_sections": [
+    {"id": "hero", "component": "hero-story", "note": "Produktová detailka + krátký úvodní příběh/claim, žádný velký CTA button."},
+    {"id": "brand_story", "component": "fullscreen-narrative", "note": "Příběh značky - fullscreen text + jedna fotka (práce v dílně)."},
+    {"id": "gallery", "component": "product-mosaic", "note": "Mozaika produktů s cenou nebo Na dotaz (z gallery type=product)."},
+    {"id": "process", "component": "process-making-steps", "note": "Proces výroby: materiál → tvarování → dokončení → finální kousek."},
+    {"id": "where_to_find", "component": "retail-locations-list", "note": "Kde nás najdete - prodejní místa, marketplace (Fler, Etsy)."},
+    {"id": "reviews", "component": "reviews-quote-wall", "note": "Recenze ve stylu stěna citátů."},
+    {"id": "order", "component": "order-contact-form", "note": "Objednávka / kontaktní formulář + telefon + email."}
+  ],
+  "optional_sections": [
+    {"id": "workshops", "component": "workshops-banner", "note": "Kurzy/workshopy - pokud firma provozuje."},
+    {"id": "instagram", "component": "instagram-feed-grid", "note": "IG feed procesu a produktů."}
+  ],
+  "forbidden_sections": ["pricing-tabs-3col", "class-schedule", "menu-full-list", "process-timeline-4step"],
+  "tone": "autentické, příběhové, pomalé; zdůraznit rukodělnost a materiály",
+  "primary_photo_type": "product-closeup-or-hands-working"
+}

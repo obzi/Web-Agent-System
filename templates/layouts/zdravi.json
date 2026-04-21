@@ -1,0 +1,20 @@
+{
+  "category": "zdravi",
+  "cta": {"primary": "Objednat termín", "secondary": "Napsat dotaz"},
+  "required_sections": [
+    {"id": "hero", "component": "hero-therapist-calm", "note": "Klidný vizuál terapeuta/ordinace; CTA Objednat termín; žádná tvrdá barva."},
+    {"id": "methods", "component": "methods-education", "note": "Naše metody / postupy - edukativní: co léčíme, jak přistupujeme."},
+    {"id": "price_list", "component": "services-price-table-simple", "note": "Ceník služeb - jednoduchá tabulka (z services[])."},
+    {"id": "team", "component": "team-credentials-cards", "note": "Tým terapeutů s kvalifikací, vzděláním (z team[] + credentials)."},
+    {"id": "visit_flow", "component": "visit-timeline", "note": "Jak probíhá vyšetření - timeline (uklidňuje nervózní pacienty)."},
+    {"id": "faq", "component": "faq-accordion-reassuring", "note": "FAQ: pojišťovna, co s sebou, příprava, délka (z faq[])."},
+    {"id": "reviews", "component": "reviews-discreet", "note": "Recenze decentně, s respektem k soukromí."},
+    {"id": "booking", "component": "online-booking-contact", "note": "Online objednávka (formulář s preferovaným termínem) + telefon + mapa."}
+  ],
+  "optional_sections": [
+    {"id": "insurance", "component": "insurance-badges", "note": "Loga pojišťoven - pokud smluvní."}
+  ],
+  "forbidden_sections": ["before-after-slider", "menu", "class-schedule", "product-mosaic"],
+  "tone": "klidné, vřelé, důvěryhodné; zdůraznit empatii a odbornost",
+  "primary_photo_type": "therapist-or-practice-interior"
+}

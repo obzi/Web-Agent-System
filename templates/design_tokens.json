@@ -1,0 +1,146 @@
+{
+  "salon": {
+    "style": "soft, curves, feminine",
+    "palette": {
+      "primary": "#d4826a",
+      "secondary": "#e8c5b0",
+      "accent": "#8b4a3f",
+      "background": "#faf5f1",
+      "text": "#2a1f1a"
+    },
+    "palette_shifts": {
+      "rose-gold": {"primary": "#d4826a", "secondary": "#e8c5b0", "accent": "#8b4a3f"},
+      "blush": {"primary": "#e8a5a5", "secondary": "#f5d0d0", "accent": "#7a3a3a"},
+      "mauve-cream": {"primary": "#a87a9a", "secondary": "#dcc5d0", "accent": "#5a3f55"}
+    },
+    "typography": {"heading": "Playfair Display", "body": "Inter"},
+    "hero_type": "split-photo",
+    "hero_variants": ["portrait-left", "portrait-right", "collage-four"]
+  },
+  "restaurace": {
+    "style": "warm, cozy, appetizing",
+    "palette": {
+      "primary": "#c85a2c",
+      "secondary": "#f0d3a8",
+      "accent": "#6b2d1a",
+      "background": "#fdf8f0",
+      "text": "#1f1411"
+    },
+    "palette_shifts": {
+      "terracotta": {"primary": "#c85a2c", "secondary": "#f0d3a8", "accent": "#6b2d1a"},
+      "deep-brown": {"primary": "#6b4423", "secondary": "#d9b382", "accent": "#2e1a0d"},
+      "forest-cream": {"primary": "#4a6b3a", "secondary": "#efe3c9", "accent": "#2a3f20"}
+    },
+    "typography": {"heading": "Lora", "body": "Montserrat"},
+    "hero_type": "fullscreen-food",
+    "hero_variants": ["overlay-dish", "split-menu-teaser", "video-ambient"]
+  },
+  "autoservis": {
+    "style": "industrial, bold, trustworthy",
+    "palette": {
+      "primary": "#ff7a1a",
+      "secondary": "#2a2a2e",
+      "accent": "#1a1a1e",
+      "background": "#f4f4f6",
+      "text": "#141417"
+    },
+    "palette_shifts": {
+      "orange-steel": {"primary": "#ff7a1a", "secondary": "#2a2a2e", "accent": "#1a1a1e"},
+      "red-graphite": {"primary": "#c7382a", "secondary": "#333338", "accent": "#14141a"},
+      "yellow-black": {"primary": "#f2b618", "secondary": "#1e1e20", "accent": "#0a0a0c"}
+    },
+    "typography": {"heading": "Oswald", "body": "IBM Plex Sans"},
+    "hero_type": "angular-phone-front",
+    "hero_variants": ["diagonal-action", "mechanic-portrait", "garage-wide"]
+  },
+  "fitness": {
+    "style": "energetic, sharp, motivating",
+    "palette": {
+      "primary": "#d4ff00",
+      "secondary": "#111118",
+      "accent": "#ff006e",
+      "background": "#0a0a0f",
+      "text": "#f5f5f7"
+    },
+    "palette_shifts": {
+      "neon-lime": {"primary": "#d4ff00", "secondary": "#111118", "accent": "#ff006e"},
+      "electric-blue": {"primary": "#00d4ff", "secondary": "#0a0a14", "accent": "#ff3d7f"},
+      "red-power": {"primary": "#ff2a3d", "secondary": "#141418", "accent": "#ffe500"}
+    },
+    "typography": {"heading": "Bebas Neue", "body": "Inter"},
+    "hero_type": "video-bg",
+    "hero_variants": ["video-loop", "gradient-overlay", "action-split"]
+  },
+  "remeslo": {
+    "style": "rustic, earthy, authentic",
+    "palette": {
+      "primary": "#9c6644",
+      "secondary": "#8a9a70",
+      "accent": "#3f2e22",
+      "background": "#f7f2e9",
+      "text": "#2d241b"
+    },
+    "palette_shifts": {
+      "terracotta-sage": {"primary": "#9c6644", "secondary": "#8a9a70", "accent": "#3f2e22"},
+      "ochre-moss": {"primary": "#b8893c", "secondary": "#6d8253", "accent": "#3a2e1a"},
+      "clay-stone": {"primary": "#a8654a", "secondary": "#b0a896", "accent": "#2a1e14"}
+    },
+    "typography": {"heading": "Fraunces", "body": "Karla"},
+    "hero_type": "story-hero",
+    "hero_variants": ["product-close", "hands-at-work", "grid-mosaic"]
+  },
+  "sluzby_b2b": {
+    "style": "clean, professional, confident",
+    "palette": {
+      "primary": "#1a3a5c",
+      "secondary": "#0d9488",
+      "accent": "#0b1f35",
+      "background": "#ffffff",
+      "text": "#141822"
+    },
+    "palette_shifts": {
+      "navy-teal": {"primary": "#1a3a5c", "secondary": "#0d9488", "accent": "#0b1f35"},
+      "slate-emerald": {"primary": "#334155", "secondary": "#059669", "accent": "#1e293b"},
+      "charcoal-gold": {"primary": "#262626", "secondary": "#b8860b", "accent": "#0a0a0a"}
+    },
+    "typography": {"heading": "Inter", "body": "Inter"},
+    "hero_type": "centered-value-prop",
+    "hero_variants": ["minimal-headline", "split-stats", "diagonal-accent"]
+  },
+  "zdravi": {
+    "style": "calm, trustworthy, reassuring",
+    "palette": {
+      "primary": "#7a9e8c",
+      "secondary": "#f0ebe4",
+      "accent": "#3a5a4a",
+      "background": "#fbfaf7",
+      "text": "#1f2922"
+    },
+    "palette_shifts": {
+      "sage-cream": {"primary": "#7a9e8c", "secondary": "#f0ebe4", "accent": "#3a5a4a"},
+      "blue-soft": {"primary": "#7a9ebf", "secondary": "#eaf0f5", "accent": "#3a5a7a"},
+      "lavender-calm": {"primary": "#a890b5", "secondary": "#f0ebf2", "accent": "#4a3a5a"}
+    },
+    "typography": {"heading": "Lora", "body": "Inter"},
+    "hero_type": "therapist-portrait",
+    "hero_variants": ["portrait-calm", "empty-space-promise", "hands-care"]
+  },
+  "eshop": {
+    "style": "product-clean, conversion-focused",
+    "palette": {
+      "primary": "#111118",
+      "secondary": "#ffffff",
+      "accent": "#ff5a1f",
+      "background": "#fafafa",
+      "text": "#141417"
+    },
+    "palette_shifts": {
+      "mono-accent": {"primary": "#111118", "secondary": "#ffffff", "accent": "#ff5a1f"},
+      "white-brand": {"primary": "#ffffff", "secondary": "#141417", "accent": "#2563eb"},
+      "warm-minimal": {"primary": "#1f1a17", "secondary": "#f5f0eb", "accent": "#c84a1a"}
+    },
+    "typography": {"heading": "Inter", "body": "Inter"},
+    "hero_type": "product-hero",
+    "hero_variants": ["product-large-left", "grid-featured", "collection-split"]
+  }
+}

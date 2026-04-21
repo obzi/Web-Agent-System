@@ -1,0 +1,21 @@
+{
+  "category": "salon",
+  "cta": {"primary": "Rezervovat online", "secondary": "Zavolat nám"},
+  "required_sections": [
+    {"id": "hero", "component": "hero-split-photo", "note": "Portrét + slogan + primary CTA; jméno firmy v headingu."},
+    {"id": "booking", "component": "reservation-widget-inline", "note": "Jediná kategorie s widgetem hned v/pod hero. Reservio/Noona embed placeholder."},
+    {"id": "price_list", "component": "services-price-table", "note": "Strukturovaná tabulka služeb s konkrétními cenami a dobou trvání (data ze services[])."},
+    {"id": "gallery_ba", "component": "before-after-slider", "note": "Horizontální slider s přetahovačkou, z gallery kde type=before/after."},
+    {"id": "team", "component": "team-cards", "note": "Karty jednotlivých stylistek s fotkami a specializací (z team[])."},
+    {"id": "instagram", "component": "instagram-feed-grid", "note": "6-9 dlaždic z IG; beauty žije z IG."},
+    {"id": "reviews", "component": "reviews-speech-bubbles", "note": "Speech-bubble layout s podpisem autora (z reviews[])."},
+    {"id": "contact", "component": "contact-hours-map", "note": "Kontakt + otevírací doba + mapa v gridu 2×."}
+  ],
+  "optional_sections": [
+    {"id": "tagline_banner", "component": "full-width-quote", "note": "Citát z recenze velkým písmem."},
+    {"id": "newsletter", "component": "newsletter-inline", "note": "Tipy a slevy do mailu."}
+  ],
+  "forbidden_sections": ["process-timeline", "class-schedule", "menu", "pricing-tiers", "case-studies"],
+  "tone": "osobní, hřejivé, lehce luxusní; oslovení ve 2. osobě",
+  "primary_photo_type": "portrait-of-stylist-or-result"
+}

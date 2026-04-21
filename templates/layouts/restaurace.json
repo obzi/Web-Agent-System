@@ -1,0 +1,20 @@
+{
+  "category": "restaurace",
+  "cta": {"primary": "Rezervovat stůl", "secondary": "Zobrazit menu"},
+  "required_sections": [
+    {"id": "hero", "component": "hero-fullscreen-food", "note": "Fullscreen fotka hlavního chodu; název + primary CTA; scroll indicator."},
+    {"id": "menu", "component": "menu-full-list", "note": "Kompletní jídelní lístek s cenami a alergeny (data z menu[]). Hlavní obsah stránky."},
+    {"id": "atmosphere", "component": "gallery-interior", "note": "Galerie interiéru 4-8 fotek (gallery type=interior)."},
+    {"id": "daily_special", "component": "daily-menu-card", "note": "Denní menu / aktuální nabídka - nahraditelné obsahem z Supabase content."},
+    {"id": "reviews", "component": "reviews-with-rating-badge", "note": "Recenze s TripAdvisor/Google hvězdičkami."},
+    {"id": "reservation", "component": "reservation-form-inline", "note": "Formulář: datum, čas, počet osob, jméno, telefon."},
+    {"id": "contact", "component": "contact-hours-map", "note": "Otevírací doba per den + mapa + telefon."}
+  ],
+  "optional_sections": [
+    {"id": "delivery", "component": "delivery-event-banner", "note": "Rozvoz / firemní akce - pouze pokud ve scrape USP zmíněno."},
+    {"id": "instagram", "component": "instagram-feed-grid", "note": "Fotky jídla z IG."}
+  ],
+  "forbidden_sections": ["process-timeline", "before-after", "class-schedule", "team-credentials", "case-studies", "pricing-tiers"],
+  "tone": "chutné, lákavé, gastronomické; smyslové popisy",
+  "primary_photo_type": "dish-food-photography"
+}
