@@ -3,150 +3,156 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wagner Ski Akademie – menu náhled</title>
+<title>Wagner – menu náhled</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    font-family: 'Arial', sans-serif;
-    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+    background: #e8e8e8;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px;
-    gap: 40px;
+    padding: 50px 20px;
+    gap: 32px;
   }
 
-  h2 {
-    font-size: 13px;
-    color: #888;
+  label-hint {
+    display: block;
+    font-size: 11px;
     letter-spacing: 1px;
+    color: #888;
     text-transform: uppercase;
   }
 
-  /* ---- NAV BAR ---- */
+  /* ────────── NAV ────────── */
   nav {
     background: #fff;
     width: 100%;
-    max-width: 1200px;
-    border-bottom: 1px solid #e0e0e0;
+    max-width: 1140px;
+    border-bottom: 1px solid #ddd;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 32px;
+    padding: 0 36px;
     height: 64px;
-    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,.07);
   }
 
-  .brand {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-  }
+  .brand { line-height: 1.2; }
   .brand-name {
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #111;
+    font-size: 14px; font-weight: 800;
+    letter-spacing: 3px; color: #111;
   }
   .brand-sub {
-    font-size: 9px;
-    letter-spacing: 2px;
-    color: #888;
-    text-transform: uppercase;
+    font-size: 8px; letter-spacing: 3px;
+    color: #999; text-transform: uppercase;
   }
 
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 26px;
     list-style: none;
   }
 
-  .nav-links li a {
-    font-size: 11px;
+  .nav-links a {
+    font-size: 10.5px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.4px;
     text-decoration: none;
-    color: #c8a600;
+    color: #c9aa00;
     text-transform: uppercase;
+    white-space: nowrap;
   }
 
-  /* ---- LYŽAŘSKÁ ŠKOLA s logem ---- */
-  .nav-links li.lyzarska {
+  /* ── LYŽAŘSKÁ ŠKOLA item ── */
+  .item-lyzarska {
     position: relative;
   }
 
-  /* Logo peeking diagonally behind the text */
-  .nav-links li.lyzarska::before {
-    content: '';
+  /* logo container – sedí za textem, šikmo vpravo nahoře */
+  .sherpa-badge {
     position: absolute;
-    /* umístění: vpravo nahoře za textem */
-    right: -10px;
-    top: -22px;
-    width: 36px;
-    height: 36px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><circle cx="40" cy="40" r="38" fill="%23003366" stroke="%23cca800" stroke-width="3"/><polygon points="40,12 60,55 20,55" fill="white" opacity="0.9"/><polygon points="40,22 53,50 27,50" fill="%23003366" opacity="0.7"/><text x="40" y="70" text-anchor="middle" font-size="9" font-family="Arial" font-weight="bold" fill="%23cca800" letter-spacing="1">SHERPA</text></svg>');
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: rotate(-15deg);
-    opacity: 0.72;
+    right: -14px;
+    top: -26px;
+    width: 40px;
+    height: 40px;
+    transform: rotate(-18deg);
+    opacity: 0.65;
     pointer-events: none;
     z-index: 0;
-    transition: opacity .2s;
+    transition: opacity .25s, transform .25s;
+    object-fit: contain;
   }
 
-  .nav-links li.lyzarska a {
+  .item-lyzarska:hover .sherpa-badge {
+    opacity: 0.9;
+    transform: rotate(-12deg) scale(1.08);
+  }
+
+  .item-lyzarska a {
     position: relative;
     z-index: 1;
   }
 
-  .nav-links li.lyzarska:hover::before {
-    opacity: 1;
-  }
-
-  /* Rezervovat button */
-  .btn-rezervovat {
+  /* rezervovat */
+  .btn-rez {
     background: #111;
     color: #fff !important;
     padding: 10px 20px;
-    font-size: 11px !important;
-    font-weight: 700 !important;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    text-decoration: none;
-    white-space: nowrap;
   }
 
-  /* ---- ANNOTATION ---- */
-  .note {
-    max-width: 600px;
+  /* ────────── DROP ZONE ────────── */
+  .drop-area {
+    width: 100%;
+    max-width: 480px;
+    border: 2px dashed #bbb;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
     font-size: 12px;
+    color: #777;
+    cursor: pointer;
+    background: #fafafa;
+    transition: border-color .2s;
+  }
+  .drop-area.drag-over { border-color: #c9aa00; background: #fffbe8; }
+  .drop-area input[type=file] { display: none; }
+  .drop-area b { color: #333; }
+
+  /* ────────── note ────────── */
+  .note {
+    max-width: 620px;
+    font-size: 11.5px;
     color: #555;
     background: #fff;
-    padding: 16px 24px;
-    border-left: 3px solid #c8a600;
-    line-height: 1.7;
+    padding: 14px 20px;
+    border-left: 3px solid #c9aa00;
+    line-height: 1.8;
   }
-  .note strong { color: #003366; }
 </style>
 </head>
 <body>
 
-<h2>Náhled – menu s logem Sherpaski</h2>
+<label-hint>Náhled – logo šikmo za „Lyžařská škola"</label-hint>
 
+<!-- ── NAV ── -->
 <nav>
   <div class="brand">
-    <span class="brand-name">WAGNER</span>
-    <span class="brand-sub">Ski Akademie</span>
+    <div class="brand-name">WAGNER</div>
+    <div class="brand-sub">Ski Akademie</div>
   </div>
 
   <ul class="nav-links">
     <li><a href="#">Aktuality</a></li>
     <li><a href="#">Lokality</a></li>
 
-    <!-- LYŽAŘSKÁ ŠKOLA s logem šikmo zezadu -->
-    <li class="lyzarska">
+    <li class="item-lyzarska">
+      <!-- Logo Sherpaski – vymění se drag-and-dropem níže -->
+      <img id="badge-img" class="sherpa-badge"
+           src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='38' fill='%23003366' stroke='%23c9aa00' stroke-width='3'/%3E%3Cpolygon points='40,14 64,58 16,58' fill='white' opacity='.9'/%3E%3Cpolygon points='40,26 55,52 25,52' fill='%23003366'/%3E%3Ctext x='40' y='72' text-anchor='middle' font-size='8' font-family='Arial' font-weight='bold' fill='%23c9aa00' letter-spacing='1.5'%3ESHERPA%3C/text%3E%3C/svg%3E"
+           alt="Sherpaski logo">
       <a href="#">Lyžařská škola</a>
     </li>
 
@@ -154,17 +160,44 @@
     <li><a href="#">Chcibytinstruktor.cz</a></li>
     <li><a href="#">Leto</a></li>
     <li><a href="#">O nás</a></li>
-    <li><a href="#" class="btn-rezervovat">Rezervovat</a></li>
+    <li><a href="#" class="btn-rez">Rezervovat</a></li>
   </ul>
 </nav>
 
-<div class="note">
-  <strong>Efekt:</strong> Logo Sherpaski vyčnívá šikmo (~−15°) za textem „Lyžařská škola"
-  vpravo nahoře, s průhledností 72 %. Jde o decentní „badge" — viditelný, ale nepřebíjí text.
-  Po najetí myší se plně zobrazí.<br><br>
-  <strong>Poznámka:</strong> Logo je zde reprezentováno SVG placeholderem (modrý kruh s horami +
-  SHERPA nápis). Nahraďte URL v <code>::before { background-image }</code> cestou k reálnému logu.
+<!-- ── DROP ZONE ── -->
+<div class="drop-area" id="dropZone" onclick="document.getElementById('filePick').click()">
+  <input type="file" id="filePick" accept="image/*">
+  <b>Klikněte nebo přetáhněte logo sem</b><br>
+  Vymění badge v menu okamžitě (PNG / SVG / JPG)
 </div>
 
+<div class="note">
+  <b>Efekt:</b> Logo je otočeno o −18°, průhlednost 65 % — decentně vyčnívá za textem.<br>
+  Po najetí myší se trochu přiblíží a zesvětlí (90 %).<br>
+  Polohu, úhel a velikost upřesníme po schválení.
+</div>
+
+<script>
+  const zone = document.getElementById('dropZone');
+  const pick = document.getElementById('filePick');
+  const badge = document.getElementById('badge-img');
+
+  function loadFile(file) {
+    if (!file || !file.type.startsWith('image/')) return;
+    const reader = new FileReader();
+    reader.onload = e => badge.src = e.target.result;
+    reader.readAsDataURL(file);
+  }
+
+  pick.addEventListener('change', e => loadFile(e.target.files[0]));
+
+  zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
+  zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+  zone.addEventListener('drop', e => {
+    e.preventDefault();
+    zone.classList.remove('drag-over');
+    loadFile(e.dataTransfer.files[0]);
+  });
+</script>
 </body>
 </html>
