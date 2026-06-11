@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wagner Ski Akademie – menu náhled</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  h2 {
+    font-size: 13px;
+    color: #888;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ---- NAV BAR ---- */
+  nav {
+    background: #fff;
+    width: 100%;
+    max-width: 1200px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 64px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  .brand-name {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #111;
+  }
+  .brand-sub {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #888;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .nav-links li a {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: #c8a600;
+    text-transform: uppercase;
+  }
+
+  /* ---- LYŽAŘSKÁ ŠKOLA s logem ---- */
+  .nav-links li.lyzarska {
+    position: relative;
+  }
+
+  /* Logo peeking diagonally behind the text */
+  .nav-links li.lyzarska::before {
+    content: '';
+    position: absolute;
+    /* umístění: vpravo nahoře za textem */
+    right: -10px;
+    top: -22px;
+    width: 36px;
+    height: 36px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><circle cx="40" cy="40" r="38" fill="%23003366" stroke="%23cca800" stroke-width="3"/><polygon points="40,12 60,55 20,55" fill="white" opacity="0.9"/><polygon points="40,22 53,50 27,50" fill="%23003366" opacity="0.7"/><text x="40" y="70" text-anchor="middle" font-size="9" font-family="Arial" font-weight="bold" fill="%23cca800" letter-spacing="1">SHERPA</text></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(-15deg);
+    opacity: 0.72;
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity .2s;
+  }
+
+  .nav-links li.lyzarska a {
+    position: relative;
+    z-index: 1;
+  }
+
+  .nav-links li.lyzarska:hover::before {
+    opacity: 1;
+  }
+
+  /* Rezervovat button */
+  .btn-rezervovat {
+    background: #111;
+    color: #fff !important;
+    padding: 10px 20px;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  /* ---- ANNOTATION ---- */
+  .note {
+    max-width: 600px;
+    font-size: 12px;
+    color: #555;
+    background: #fff;
+    padding: 16px 24px;
+    border-left: 3px solid #c8a600;
+    line-height: 1.7;
+  }
+  .note strong { color: #003366; }
+</style>
+</head>
+<body>
+
+<h2>Náhled – menu s logem Sherpaski</h2>
+
+<nav>
+  <div class="brand">
+    <span class="brand-name">WAGNER</span>
+    <span class="brand-sub">Ski Akademie</span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="#">Aktuality</a></li>
+    <li><a href="#">Lokality</a></li>
+
+    <!-- LYŽAŘSKÁ ŠKOLA s logem šikmo zezadu -->
+    <li class="lyzarska">
+      <a href="#">Lyžařská škola</a>
+    </li>
+
+    <li><a href="#">Skicamp.cz</a></li>
+    <li><a href="#">Chcibytinstruktor.cz</a></li>
+    <li><a href="#">Leto</a></li>
+    <li><a href="#">O nás</a></li>
+    <li><a href="#" class="btn-rezervovat">Rezervovat</a></li>
+  </ul>
+</nav>
+
+<div class="note">
+  <strong>Efekt:</strong> Logo Sherpaski vyčnívá šikmo (~−15°) za textem „Lyžařská škola"
+  vpravo nahoře, s průhledností 72 %. Jde o decentní „badge" — viditelný, ale nepřebíjí text.
+  Po najetí myší se plně zobrazí.<br><br>
+  <strong>Poznámka:</strong> Logo je zde reprezentováno SVG placeholderem (modrý kruh s horami +
+  SHERPA nápis). Nahraďte URL v <code>::before { background-image }</code> cestou k reálnému logu.
+</div>
+
+</body>
+</html>
